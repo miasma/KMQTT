@@ -71,11 +71,11 @@ internal class ClusterConnection(private val socket: SocketInterface, private va
         socket.close()
     }
 
-    fun publish(packet: mqtt.packets.mqtt.MQTTPublish) {
+    fun publish(packet: io.github.davidepianca98.mqtt.packets.mqtt.MQTTPublish) {
         socket.send(PublishPacket(packet).toByteArray())
     }
 
-    fun setRetained(retained: Pair<mqtt.packets.mqtt.MQTTPublish, String>) {
+    fun setRetained(retained: Pair<io.github.davidepianca98.mqtt.packets.mqtt.MQTTPublish, String>) {
         socket.send(SetRetainedPacket(retained).toByteArray())
     }
 

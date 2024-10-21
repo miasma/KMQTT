@@ -1,5 +1,3 @@
-package io.github.davidepianca98.socket.tls
-
 @file:JsModule("node:tls")
 
 

@@ -2,7 +2,7 @@ package io.github.davidepianca98.mqtt.broker
 
 
 import io.github.davidepianca98.currentTimeMillis
-import generateRandomClientId
+import io.github.davidepianca98.generateRandomClientId
 import io.github.davidepianca98.mqtt.*
 import io.github.davidepianca98.mqtt.broker.cluster.RemoteSession
 import io.github.davidepianca98.mqtt.broker.interfaces.EnhancedAuthenticationProvider

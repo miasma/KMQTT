@@ -1,24 +1,24 @@
 package io.github.davidepianca98.socket.udp
 
 
-import close
-import getEagain
-import getErrno
-import getEwouldblock
-import getPortFromSockaddrIn
-import inet_ntop
-import inet_pton
+import io.github.davidepianca98.close
+import io.github.davidepianca98.getEagain
+import io.github.davidepianca98.getErrno
+import io.github.davidepianca98.getEwouldblock
+import io.github.davidepianca98.getPortFromSockaddrIn
+import io.github.davidepianca98.inet_ntop
+import io.github.davidepianca98.inet_pton
 import kotlinx.cinterop.*
-import memset
+import io.github.davidepianca98.memset
 import platform.posix.AF_INET
 import platform.posix.sockaddr
 import platform.posix.sockaddr_in
-import recvfrom
-import sendto
-import sockaddrIn
+import io.github.davidepianca98.recvfrom
+import io.github.davidepianca98.sendto
+import io.github.davidepianca98.sockaddrIn
 import io.github.davidepianca98.socket.IOException
 import io.github.davidepianca98.socket.SocketClosedException
-import socklen_tVar
+import io.github.davidepianca98.socklen_tVar
 
 internal actual class UDPSocket(private val socket: Int) {
 

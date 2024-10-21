@@ -1,7 +1,7 @@
 package io.github.davidepianca98.integration
 
 
-import MQTTClient
+import io.github.davidepianca98.MQTTClient
 import com.goncalossilva.resources.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

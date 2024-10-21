@@ -1,32 +1,32 @@
 package io.github.davidepianca98.socket
 
 
-import bind
-import close
-import getEagain
-import getErrno
-import getEwouldblock
-import inet_pton
+import io.github.davidepianca98.bind
+import io.github.davidepianca98.close
+import io.github.davidepianca98.getEagain
+import io.github.davidepianca98.getErrno
+import io.github.davidepianca98.getEwouldblock
+import io.github.davidepianca98.inet_pton
 import kotlinx.cinterop.*
-import listen
+import io.github.davidepianca98.listen
 import io.github.davidepianca98.mqtt.broker.Broker
 import io.github.davidepianca98.mqtt.broker.ClientConnection
 import io.github.davidepianca98.mqtt.broker.cluster.ClusterConnection
 import io.github.davidepianca98.mqtt.broker.cluster.ClusterDiscoveryConnection
 import io.github.davidepianca98.mqtt.broker.udp.UDPConnectionsMap
 import platform.posix.*
-import select
-import set_non_blocking
-import setsockopt
-import shutdown
-import sockaddrIn
+import io.github.davidepianca98.select
+import io.github.davidepianca98.set_non_blocking
+import io.github.davidepianca98.setsockopt
+import io.github.davidepianca98.shutdown
+import io.github.davidepianca98.sockaddrIn
 import io.github.davidepianca98.socket
 import io.github.davidepianca98.socket.tcp.Socket
 import io.github.davidepianca98.socket.tcp.WebSocket
 import io.github.davidepianca98.socket.udp.UDPSocket
 import io.github.davidepianca98.socketsCleanup
 import io.github.davidepianca98.socketsInit
-import accept as posixAccept
+import io.github.davidepianca98.accept as posixAccept
 
 internal actual open class ServerSocket actual constructor(
     private val broker: Broker,

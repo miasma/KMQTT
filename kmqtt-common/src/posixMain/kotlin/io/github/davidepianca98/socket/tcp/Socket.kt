@@ -1,16 +1,16 @@
 package io.github.davidepianca98.socket.tcp
 
 
-import close
-import getEagain
-import getErrno
-import getEwouldblock
+import io.github.davidepianca98.close
+import io.github.davidepianca98.getEagain
+import io.github.davidepianca98.getErrno
+import io.github.davidepianca98.getEwouldblock
 import kotlinx.cinterop.addressOf
 import kotlinx.cinterop.convert
 import kotlinx.cinterop.usePinned
-import recv
-import send
-import shutdown
+import io.github.davidepianca98.recv
+import io.github.davidepianca98.send
+import io.github.davidepianca98.shutdown
 import io.github.davidepianca98.socket.IOException
 import io.github.davidepianca98.socket.SocketClosedException
 import io.github.davidepianca98.socket.SocketInterface

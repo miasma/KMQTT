@@ -6,7 +6,7 @@ import node.net.Socket
 import node.net.SocketEvent
 import io.github.davidepianca98.socket.SocketInterface
 import io.github.davidepianca98.socket.SocketState
-import toBuffer
+import io.github.davidepianca98.toBuffer
 
 public actual open class Socket(
     protected val socket: Socket,

@@ -1,13 +1,13 @@
 package io.github.davidepianca98.socket.tcp
 
 
-import sha1
+import io.github.davidepianca98.sha1
 import io.github.davidepianca98.socket.IOException
 import io.github.davidepianca98.socket.SocketInterface
 import io.github.davidepianca98.socket.streams.ByteArrayOutputStream
 import io.github.davidepianca98.socket.streams.DynamicByteBuffer
 import io.github.davidepianca98.socket.streams.EOFException
-import toBase64
+import io.github.davidepianca98.toBase64
 
 
 internal class WebSocket(private val socket: Socket) : SocketInterface {

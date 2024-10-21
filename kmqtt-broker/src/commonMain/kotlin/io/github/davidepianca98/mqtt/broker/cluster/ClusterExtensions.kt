@@ -4,7 +4,7 @@ package io.github.davidepianca98.mqtt.broker.cluster
 import io.github.davidepianca98.mqtt.Subscription
 import io.github.davidepianca98.mqtt.broker.Session
 
-internal fun MutableMap<String, ClusterConnection>.setRetained(retained: Pair<mqtt.packets.mqtt.MQTTPublish, String>) {
+internal fun MutableMap<String, ClusterConnection>.setRetained(retained: Pair<io.github.davidepianca98.mqtt.packets.mqtt.MQTTPublish, String>) {
     forEach {
         it.value.setRetained(retained)
     }

@@ -2,7 +2,7 @@ package io.github.davidepianca98.socket.udp
 
 
 import io.github.davidepianca98.socket.SocketState
-import toBuffer
+import io.github.davidepianca98.toBuffer
 
 internal actual class UDPSocket(
     private val socket: node.dgram.Socket,

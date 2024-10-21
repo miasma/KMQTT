@@ -2,7 +2,7 @@ package io.github.davidepianca98.mqtt.broker
 
 
 import io.github.davidepianca98.currentTimeMillis
-import datastructures.Trie
+import io.github.davidepianca98.datastructures.Trie
 import kotlinx.atomicfu.locks.reentrantLock
 import kotlinx.atomicfu.locks.withLock
 import io.github.davidepianca98.mqtt.MQTTException
@@ -11,10 +11,11 @@ import io.github.davidepianca98.mqtt.broker.cluster.*
 import io.github.davidepianca98.mqtt.broker.interfaces.*
 import io.github.davidepianca98.mqtt.matchesWildcard
 import io.github.davidepianca98.mqtt.packets.Qos
+import io.github.davidepianca98.mqtt.packets.mqtt.*
 import io.github.davidepianca98.mqtt.packets.mqttv5.MQTT5Properties
 import io.github.davidepianca98.mqtt.packets.mqttv5.MQTT5Publish
 import io.github.davidepianca98.mqtt.packets.mqttv5.ReasonCode
-import removeIf
+import io.github.davidepianca98.removeIf
 import io.github.davidepianca98.socket.ServerSocketLoop
 import io.github.davidepianca98.socket.tls.TLSSettings
 
@@ -273,7 +274,7 @@ public class Broker(
         }
     }
 
-    internal fun publishFromRemote(packet: mqtt.packets.mqtt.MQTTPublish) {
+    internal fun publishFromRemote(packet: io.github.davidepianca98.mqtt.packets.mqtt.MQTTPublish) {
         publish(
             "",
             packet.retain,
@@ -341,7 +342,7 @@ public class Broker(
         }
     }
 
-    internal fun setRetained(topicName: String, message: mqtt.packets.mqtt.MQTTPublish, clientId: String, remote: Boolean = false) {
+    internal fun setRetained(topicName: String, message: io.github.davidepianca98.mqtt.packets.mqtt.MQTTPublish, clientId: String, remote: Boolean = false) {
         if (retainedAvailable) {
             if (message.payload?.isNotEmpty() == true) {
                 val retained = Pair(message, clientId)
@@ -374,7 +375,7 @@ public class Broker(
         }
     }
 
-    internal fun getRetained(topicFilter: String): List<Pair<mqtt.packets.mqtt.MQTTPublish, String>> {
+    internal fun getRetained(topicFilter: String): List<Pair<io.github.davidepianca98.mqtt.packets.mqtt.MQTTPublish, String>> {
         removeExpiredRetainedMessages()
         return retainedList.filter { it.key.matchesWildcard(topicFilter) }.map { it.value }
     }
